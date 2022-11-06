@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <div id="element" class='holo'></div>
+    <section class="gallery">
+       <h2 class="title">{{category}}</h2>
+       <div class="gallery-list">
+         {%for klo in imgg%}
+       <a href="/media/{{klo.image}}" class="gallery-item">
+           <div class="gallery-item-hover">ПРОСМОТРЕТЬ</div>
+           <img src="/media/{{klo.image}}" alt="alt">
+       </a>
+      {%endfor%}
+       </div>
+
+    </section>
+    {% endblock %}
+  
+</body>
+</html>

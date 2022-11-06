@@ -1,0 +1,401 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Comfortaa', cursive;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding:0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+.holo{
+    display: block;
+width: 100%;
+    height: 50px;
+
+}
+.header{
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+  height: 50px;
+  background: #34495e;
+  padding: 0 20px;
+  color: #fff;
+  opacity: .9;
+}
+.logo{
+   text-transform: uppercase;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+}
+.menu a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.show-menu-btn,.hide-menu-btn{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover{
+  color: #3498db;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+main {
+
+}
+h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin: 20px 0px 30px 0px;
+    font-weight: 700;
+}
+.srv {
+   max-width: 1450px;
+    margin: 0 auto;
+
+}
+
+.srv ul{
+    display: block;
+    max-width:  650px;
+    margin: 0 auto;
+    padding: 15px;
+
+}
+
+.srv li {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    list-style: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: inherit;
+}
+.main>ul {
+  list-style: none;
+  margin: 2rem ;
+  width: 90%;
+  max-width: 70rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  background-color: #eeeeee;
+}
+
+.main>li {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.main>li:last-of-type,
+.main>li:nth-of-type(6) {
+  border-bottom: none;
+}
+
+.main>li a {
+  text-decoration: none;
+  color: #383838;
+}
+
+.main>li a:hover,
+.main>li a:active {
+  color: #7e0154;
+}
+
+/**prod**/
+section.produkt{
+    position: relative;
+    padding: 5px 5px;
+}
+
+.produkt-list{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.produkt-item{
+    display: block;
+    flex: 25%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    margin-bottom: -5px;
+}
+.produkt-item-hover{
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 98%;
+    background-color: rgba(0,0,0,.3);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    opacity: 1;
+    transition: opacity .5s ease;
+    z-index: 2;
+}
+.produkt-item:hover .produkt-item-hover{
+    opacity: 1;
+    background-color: rgba(0,0,0,.1);
+}
+.produkt-item:hover img{
+    transform: scale(1.3) rotate(5deg);
+}
+.produkt-item img{
+    max-width: 100%;
+    height: auto;
+    transition: all .5s ease;
+}
+section.gallery{
+    position: relative;
+    padding: 5px 0;
+}
+h2.title{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 45px;
+}
+.gallery>.title{
+     font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0px;
+}
+.gallery-list{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.gallery-item{
+    display: block;
+    flex: 25%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+.gallery-item-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity .5s ease;
+    z-index: 2;
+}
+.gallery-item:hover .gallery-item-hover{
+    opacity: 1;
+}
+.gallery-item:hover img{
+    transform: scale(1.3) rotate(5deg);
+}
+.gallery-item img{
+    max-width: 100%;
+    height: auto;
+    transition: all .5s ease;
+}
+footer{
+
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+
+}
+footer p {
+  color:aliceblue;
+}
+.tel{
+  text-decoration: none;
+  color:aliceblue;
+}
+.footer-ul{
+    display: flex;
+    justify-content: center;
+
+
+    }
+
+
+.footer-ul a{
+
+
+    display: block;
+    position:relative;
+    text-align: center;
+    color: #666;
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    background: #171515;
+    line-height: 60px;
+    border-radius: 50%;
+    margin: 0 15px;
+    cursor: pointer;
+
+
+}
+.footer-ul a:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: #d35400;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transform: scale(0.9);
+    opacity: 0.6;
+    z-index: -1;
+    transition: .5s;
+}
+.footer-ul a:hover:before{
+    filter: blur(3px);
+    transform: scale(1.2);
+    z-index: 1;
+    box-shadow: 0 0 15px #d35400;
+
+}
+
+@media screen and (max-width:800px) {
+  .show-menu-btn,.hide-menu-btn{
+    display: block;
+  }
+  .menu{
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: -5%;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+      overflow: hidden
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu-btn{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+
+  }
+    .produkt-list{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.srv li {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    list-style: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+        line-height: inherit;
+    }
+.produkt-item{
+    display: block;
+    flex: 50%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    margin-bottom: -5px;
+}
+    .gallery-item{
+    display: block;
+    flex: 50%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+}

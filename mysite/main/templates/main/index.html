@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div id="element" class='holo'></div>
+  <ul class="rslides">
+     {% for item in slide %}
+       <li><img src="/media/{{item.slide_image}}" alt=""></li>
+     {%endfor%}
+   </ul>
+  <main>
+        <div id="element1" class="page__section_4 srv">
+        <h3>Услуги</h3>
+         <ul class='test1'>
+            <li><i class="fal fa-drafting-compass"></i>- прямая и фигурная резка. </li>
+             <li><i class="fal fa-drafting-compass"></i>- изготовление столешниц и полок любых размеров. </li>
+             <li><i class="fal fa-drafting-compass "></i>- изготовление зеркал (в том числе с полками и подсветкой).</li>
+             <li><i class="fal fa-drafting-compass "></i>- шлифовка и полировка кромки. </li>
+             <li><i class="fal fa-drafting-compass"></i>- витражи Тиффани и пленочные.</li>
+             <li><i class="fal fa-drafting-compass"></i>- витражи по технологии CRI (Англия).</li>
+             <li><i class="fal fa-drafting-compass"></i>- пескоструйная обработка.</li>
+             <li><i class="fal fa-drafting-compass"></i>- покраска стекла и зеркал.</li>
+             <li><i class="fal fa-drafting-compass"></i>- художественное декорирование рисунком;шкафы-купе,гардеробные,душевые кабины,стеклянные двери,раздвижные перегородки.</li>
+             <li><i class="fal fa-drafting-compass"></i>- гибка стекол.</li>
+             <li><i class="fal fa-drafting-compass"></i>- Разработка дизайн – проектов. Доставка и установка наших изделий.</li>
+
+
+         </ul>
+      </div>
+  </main>
+    <section id="element2" class="produkt page__section_3">
+        <h3>Продукция</h3>
+        <div class="produkt-list">
+           {% for item in categories %}
+            <a href="category/{{item.pk}}" class="produkt-item">
+               <div class="produkt-item-hover">{{item.category_name}}</div>
+               <img src="/media/{{item.cat_image}}" alt="alt">
+           </a>
+           {% endfor %}
+          
+
+        </div>
+    </section>
+    {% endblock %}
